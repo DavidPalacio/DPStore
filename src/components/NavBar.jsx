@@ -1,11 +1,13 @@
 //import Navbar from 'react-bootstrap/Navbar';
 import { Navbar, Container, Nav, NavDropdown} from "react-bootstrap";
+//import CardWidget from "CardWidget";      <CardWidget/>       
 
 function NavBar() {
     return (
         //<div>Bienvenidos</div>
         <Navbar bg="light" expand="lg">
         <Container>
+
             <Navbar.Brand href="#home">Tiendita de Marleny</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -18,6 +20,7 @@ function NavBar() {
                 <NavDropdown.Item href="#action/3.4">No Fiamos</NavDropdown.Item>
                 </NavDropdown>
             </Nav>
+
             </Navbar.Collapse>
         </Container>
         </Navbar>
