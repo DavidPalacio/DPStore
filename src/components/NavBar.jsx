@@ -1,6 +1,6 @@
 //import Navbar from 'react-bootstrap/Navbar';
 import { Navbar, Container, Nav, NavDropdown} from "react-bootstrap";
-//import CardWidget from "CardWidget";      <CardWidget/>       
+import CardWidget from "./CardWidget";             
 
 function NavBar() {
     return (
@@ -20,7 +20,7 @@ function NavBar() {
                 <NavDropdown.Item href="#action/3.4">No Fiamos</NavDropdown.Item>
                 </NavDropdown>
             </Nav>
-
+            <CardWidget/>
             </Navbar.Collapse>
         </Container>
         </Navbar>

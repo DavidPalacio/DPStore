@@ -1,8 +1,8 @@
-import { BiCart } from 'react-icons/fa';
+import { BiCart } from 'react-icons/bi';
 
-class Question extends React.Component {
-  render() {
-    return <h3> ir al carrito <BiCart /></h3>
-  }
+function Carrito() {
+  return (
+    <h3 style={{color: 'black'}}> ir al carrito <BiCart /></h3>
+  );
 }
-
+export default Carrito;
