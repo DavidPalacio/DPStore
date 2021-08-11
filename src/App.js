@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/NavBar';
 import Saludo from './components/Saludo';
+import Lista from "./components/itemList";
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
         <Navbar/>
       </header>
       <Saludo/>
+      <Lista/>
+      
       
     </div>
   );
