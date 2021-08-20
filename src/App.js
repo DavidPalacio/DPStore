@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/NavBar';
 import Saludo from './components/Saludo';
-import Lista from "./components/itemList";
+import Lista from "./components/ItemList";
 
 function App() {
   return (
@@ -13,8 +13,7 @@ function App() {
       </header>
       <Saludo/>
       <Lista/>
-      
-      
+          
     </div>
   );
 }
