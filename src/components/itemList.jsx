@@ -1,4 +1,5 @@
-import {Card, Button, Container, Row, Col} from "react-bootstrap";
+import {Card, Button, Container} from "react-bootstrap";
+import ItemCount from "./ItemCount";
 const { useEffect, useState } = require("react");
 
 export default function ItemList() {
@@ -10,7 +11,7 @@ export default function ItemList() {
       const data = [
         {
           id: "1",
-          name: "naranjas",
+          name: "Naranjas",
           description: "Toronja",
           img:  "https://images.unsplash.com/photo-1613747495731-3add0988073a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
           stock: 9
@@ -56,6 +57,9 @@ export default function ItemList() {
                     <Card.Img variant="top" src={cadaProducto.img} />
                     <Card.Text>{cadaProducto.description}</Card.Text>
                     <Card.Text>Disponibles: {cadaProducto.stock}</Card.Text>
+                    <div>
+                    <ItemCount stock={cadaProducto.stock}/>
+                    </div>
                     <Button variant="primary">Agregar</Button>
                 </Card.Body>
                 </Card> 

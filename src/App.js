@@ -1,20 +1,21 @@
 
 import './App.css';
+import { BrowserRouter, Switch, Route } from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/NavBar';
 import Saludo from './components/Saludo';
-import Lista from "./components/ItemList";
+import Lista from './components/ItemList';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <header className="App-header">
-        <Navbar/>
+        <Navbar/> 
       </header>
       <Saludo/>
       <Lista/>
-          
-    </div>
+    </>
   );
 }
 
