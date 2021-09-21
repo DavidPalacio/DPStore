@@ -30,7 +30,7 @@ export default function ItemList() {
     new Promise((resolve, reject) => {
       setLoading(true);
       setTimeout(() => resolve(productsJson), 3000);
-      console.log("Se cargo la lista liscontainer", products)
+      console.log("Se cargo la lista List Container", products)
     })
       .then((data) => setProducts(data))
       .finally(() => {
@@ -46,7 +46,7 @@ export default function ItemList() {
     <>
     <Container className="p-2 fluid"> 
       {products.map((setProducts) => (
-        <Item setProducts={setProducts}/>
+        <Item props={setProducts}/>
       ))}
     </Container>
     </>  
