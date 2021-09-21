@@ -12,12 +12,10 @@ function ItemDetailContainer() {
     new Promise((resolve, reject) => {
       setTimeout(
         () => resolve(productsJson.filter((item) => item.id === id)),
-        3000
+        500
       );
     }).then((data) => setProduct(data[0]));
   }, []);
-
-  console.log("product", product);
 
   return <ItemDetail {...product} />;
 }

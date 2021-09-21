@@ -29,13 +29,12 @@ export default function ItemList() {
   useEffect(() => {
     new Promise((resolve, reject) => {
       setLoading(true);
-      setTimeout(() => resolve(productsJson), 3000);
+      setTimeout(() => resolve(productsJson), 500);
       console.log("Se cargo la lista List Container", products)
     })
       .then((data) => setProducts(data))
       .finally(() => {
         setLoading(false);
-        console.log("Valores de Data:", products);
       });
   }, []);
 
@@ -46,7 +45,7 @@ export default function ItemList() {
     <>
     <Container className="p-2 fluid"> 
       {products.map((setProducts) => (
-        <Item props={setProducts}/>
+        <Item {...setProducts}/>
       ))}
     </Container>
     </>  

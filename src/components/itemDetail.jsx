@@ -7,8 +7,7 @@ function ItemDetail(props) {
   const [stock, setCantidad] = useState();
   const onAdd = (producto) => {
     console("agregaron un producto", producto);
-    // voy a mostrar un boton que diga, terminar  mi compra
-    // y me va a redigir a una nueva pagina /cart  que por ahora esta vacio
+
   };
   return (
 <>

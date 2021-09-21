@@ -5,6 +5,7 @@ import {Container, Button } from "react-bootstrap";
 export default function ItemCounts(props) {
   const [count, setCount] = useState(0);
   const [stock, setStock] = useState(props.stock);
+  console.log("El valor del Stock es: ",props.stock);
 
   useEffect(() => {
     console.log("Estoy Comparando el Stock y El contador", count, stock);
