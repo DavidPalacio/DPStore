@@ -1,20 +1,31 @@
 
 import './App.css';
-import { BrowserRouter, Switch, Route } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/NavBar';
+import NavBar from './components/NavBar';
 import Saludo from './components/Saludo';
-import Lista from './components/ItemList';
+import ItemListContainer from './components/itemListContainer';
+import ItemDetailContainer from './components/itemDetailContainer';
 
 function App() {
   return (
     <>
+    <BrowserRouter>
       <header className="App-header">
-        <Navbar/> 
-      </header>
+        <NavBar/> 
+      </header >
       <Saludo/>
-      <Lista/>
+      <Switch>
+        <Route exact path="/">
+          <ItemListContainer/>
+        </Route>
+        <Route exact path="/item/:id">
+          <ItemDetailContainer/>  
+        </Route>
+      </Switch>
+    </BrowserRouter>
+
     </>
   );
 }

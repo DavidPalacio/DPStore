@@ -8,9 +8,6 @@ export default function ItemCounts(props) {
 
   useEffect(() => {
     console.log("Estoy Comparando el Stock y El contador", count, stock);
-    
-
-  
 
     return () => {
       console.log("esto lo voy a hacer cuando ya no este en el DOM");
@@ -29,7 +26,6 @@ export default function ItemCounts(props) {
     }
   };
 
-  
   return (
     <>
     <Container>
