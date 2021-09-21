@@ -1,21 +1,17 @@
 import { Link } from "react-router-dom";
-import {Card, Container} from "react-bootstrap";
+import {Card} from "react-bootstrap";
 
-function Item(props) {
+function Item(setProducts) {
   return (
   <>
-  <Container className="p-2"> 
     <Card style={{ width: '18rem' }}>
-    <Card.Body>
-      <Card.Title>{props.name}</Card.Title>
-      <Link to={`/item/${props.id}`}>ir al detalle</Link>     
-      <Card.Text>${props.price}</Card.Text>     
-    </Card.Body>    
+      <Card.Body>
+        <Card.Title>{setProducts.name}</Card.Title>
+        <Link to={`/item/${setProducts.id}`}>ir al detalle</Link>     
+        <Card.Text>${setProducts.price}</Card.Text>     
+      </Card.Body>    
     </Card> 
-  </Container>
   </>
   );
 }
-
 export default Item;
-    
