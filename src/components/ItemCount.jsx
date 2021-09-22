@@ -4,11 +4,13 @@ import {Container, Button } from "react-bootstrap";
 
 export default function ItemCounts(props) {
   const [count, setCount] = useState(0);
-  const [stock, setStock] = useState(props.stock);
-  console.log("El valor del Stock es: ",props.stock);
+  const stock = (props.stock);
+  //const [stock, setStock] = useState(props.stock);
+    console.log("El valor del Stock es: ",props.stock, count);
 
   useEffect(() => {
-    console.log("Estoy Comparando el Stock y El contador", count, stock);
+    
+    console.log("Estoy Comparando el Stock y El contador", count);
 
     return () => {
       console.log("esto lo voy a hacer cuando ya no este en el DOM");
@@ -16,12 +18,14 @@ export default function ItemCounts(props) {
   }, [count]); //componentDidMount y countDidUpdate al vigilar count
 
   const sumar = () => {
+//    console.log('entre a sumar, count, stock', count, stock);
     if (count < stock) {
       setCount(count + 1);
     }
   };
 
   const restar = () => {
+    console.log('entre a restar');
     if (count > 0) {
       setCount(count - 1);
     }

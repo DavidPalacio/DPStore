@@ -22,7 +22,7 @@ function ItemDetail(props) {
       <div>      
           <ItemCount stock={props.stock}/>      
       </div>      
-      <Button variant="primary" onClick={() => props.onAdd(props)}>Agregar</Button>        
+      <Button variant="primary" onClick={(props)}>Agregar</Button>        
     </Card.Body>    
     </Card> 
   </Container>
