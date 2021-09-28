@@ -5,10 +5,10 @@ import ItemCount from "./itemCount";
 
 function ItemDetail(props) {
   const [stock, setCantidad] = useState();
-  const onAdd = (producto) => {
-    console("agregaron un producto", producto);
-
-  };
+  const onAdd = (stock) => {
+    console("agregaron un producto", stock);
+    
+    };
   return (
 <>
   <Container className="p-2"> 
@@ -20,9 +20,9 @@ function ItemDetail(props) {
       <Card.Text>${props.price}</Card.Text>     
       <Card.Text>Disponibles: {props.stock}</Card.Text>   
       <div>      
-          <ItemCount stock={props.stock}/>      
+          <ItemCount stock={props.stock}/>
       </div>      
-      <Button variant="primary" onClick={(props)}>Agregar</Button>        
+      <Button variant="primary" onClick={(props)} onAdd={onAdd}>Agregar</Button>        
     </Card.Body>    
     </Card> 
   </Container>

@@ -18,14 +18,12 @@ export default function ItemCounts(props) {
   }, [count]); //componentDidMount y countDidUpdate al vigilar count
 
   const sumar = () => {
-//    console.log('entre a sumar, count, stock', count, stock);
     if (count < stock) {
       setCount(count + 1);
     }
   };
 
   const restar = () => {
-    console.log('entre a restar');
     if (count > 0) {
       setCount(count - 1);
     }
